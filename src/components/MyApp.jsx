@@ -29,10 +29,12 @@ const MyApp = () => {
   return (
     <div className="box-border grid relative dark:bg-[#002733] dark:text-[#e2fdff] bg-[#5465ff] text-[#e2fdff] min-h-screen h-auto p-1">
       <Header setTheme={setTheme} theme={theme} />
-      <Routes>
+      <HeorSection/>
+      <Gallery/>
+      {/* <Routes>
         <Route path="/" element={<HeorSection/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
-      </Routes>
+      </Routes> */}
       {/* <Footer/> */}
     </div>
   );

@@ -45,7 +45,7 @@ const Header = ({ setTheme, theme }) => {
               HOME
             </li>
           </Link>
-          <Link to='/gallery'>
+          <Link to='gallery'>
             <li className="text-lg font-ubuntu font-semibold cursor-pointer lg:bg-gradient-to-r lg:from-[#e2fdff] lg:to-[#e2fdff] lg:bg-left-bottom lg:bg-no-repeat lg:bg-[length:0%_3px] lg:hover:bg-[length:100%_3px] lg:transition-all">
               GALLERY
             </li>
