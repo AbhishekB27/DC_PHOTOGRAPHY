@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Gallery from "./Gallery";
 import HeorSection from "./HeorSection";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
@@ -25,9 +27,12 @@ const MyApp = () => {
     }
   }, [theme]);
   return (
-    <div className="box-border relative dark:bg-[#002733] dark:text-[#e2fdff] bg-[#5465ff] text-[#e2fdff] min-h-screen h-auto p-1">
+    <div className="box-border grid relative dark:bg-[#002733] dark:text-[#e2fdff] bg-[#5465ff] text-[#e2fdff] min-h-screen h-auto p-1">
       <Header setTheme={setTheme} theme={theme} />
-      <HeorSection />
+      <Routes>
+        <Route path="/" element={<HeorSection/>}/>
+        <Route path="/gallery" element={<Gallery/>}/>
+      </Routes>
       {/* <Footer/> */}
     </div>
   );
