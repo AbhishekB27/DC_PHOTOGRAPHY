@@ -1,22 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Ubuntu:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Ubuntu:wght@300&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .camera {
+    transform: rotateZ(5deg);
+    animation: App-logo infinite 20s ease-in-out;
+  }
+}
+@keyframes App-logo {
+  10% {
+    transform: rotateZ(0deg);
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+    transform: rotateZ(5deg);
+  }
+  40% {
+    transform: rotateZ(0deg);
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+    transform: rotateZ(-5deg);
+  }
+  80% {
+    transform: scale(1);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: scale(1.1);
+    transform: rotateZ(5deg);
+  }
+}
+.claymorphism {
+  backdrop-filter: blur(5px);
+
+background-color: rgba(255, 255, 255, 1);
+
+border-radius: 26px;
+
+box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5), inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
 }

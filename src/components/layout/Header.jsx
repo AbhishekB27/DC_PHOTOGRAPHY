@@ -1,10 +1,4 @@
 import {
-  faCameraAlt,
-  faCameraRetro,
-  faCameraRotate,
-  faVideoCamera,
-} from "@fortawesome/free-solid-svg-icons";
-import {
   faFacebook,
   faYoutube,
   faInstagram,
@@ -14,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import Hamburger from "./Hamburger";
 import ToggleMode from "./ToggleMode";
+import DCLOGO from '../images/logoDC.png'
 import { Link } from "react-router-dom";
 
 const Header = ({ setTheme, theme }) => {
@@ -25,11 +20,13 @@ const Header = ({ setTheme, theme }) => {
   return (
     <header className="flex flex-col gap-1">
       <div className="flex justify-between items-center pb-1 border-b-2 border-[#e2fdff]">
-        <div className="cursor-pointer">
-          <FontAwesomeIcon className="text-xl" icon={faCameraRetro} />{" "}
-          <span className="font-dancingScript text-xl font-extrabold tracking-wider">
-            DC PHOTOGRAPHY
-          </span>
+        <div className="relative cursor-pointer  px-1 text-white flex justify-center items-center">
+          {/* <FontAwesomeIcon className="text-xl" icon={faCameraRetro} />{" "} */}
+          <img className="w-[2rem] hover:scale-105 transition-all md:w-[3rem] h-[2rem] md:h-[3rem] " src={DCLOGO} alt="" />
+          <div className="flex flex-col justify-center items-end ">
+            <span className="text-sm md:text-lg bg-clip-text bg-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500  tracking-wider font-dancingScript lg:font-extrabold">DC PHOTOGRAPHY</span> 
+          <span className="text-xs md:text-sm font-ubuntu bg-clip-text bg-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">Camera is our pen</span>
+          </div>
         </div>
         <ToggleMode setTheme={setTheme} theme={theme} />
       </div>
