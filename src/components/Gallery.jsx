@@ -1,21 +1,12 @@
-import { faImages } from "@fortawesome/free-regular-svg-icons";
-import {
-  faCamera,
-  faFileImage,
-  faImagePortrait,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useState } from "react";
 import gallery from "./images/gallery";
-import GalleryI from './images/GalleryI.png'
+import GalleryI from "./images/GalleryI.png";
 
 const Gallery = () => {
   return (
-    <div className="w-full flex justify-center items-center">
-      <div
-        className="container flex gap-3 lg:gap-5 flex-col items-center md:items-start border-t-2 border-[#e2fdff]"
-        id="gallery"
-      >
+    <div id="gallery" className="w-full flex justify-center items-center mt-3">
+      <div className="container flex gap-3 lg:gap-5 flex-col items-center md:items-start border-[#e2fdff]">
         <div className="lg:relative flex flex-col justify-center items-center lg:justify-start lg:items-start lg:flex-row font-poppins lg:h-[19rem] w-full">
           <div className="lg:text-6xl flex lg:h-fit text-4xl lg:font-medium">
             My
@@ -32,18 +23,22 @@ const Gallery = () => {
             the beauty of the world around us through the lens of some of the
             best photographers
           </div>
-          <img className="hidden h-[15rem] rotate-3 hover:rotate-0 w-[15rem] lg:absolute hover:cursor-pointer hover:scale-105 lg:transition-all lg:left-[45rem] lg:top-[2rem] lg:block" src={GalleryI} alt="" />
+          <img
+            className="hidden h-[15rem] hover:rotate-0 w-[15rem] lg:absolute hover:cursor-pointer hover:scale-105 lg:transition-all lg:left-[45rem] lg:top-[2rem] lg:block"
+            src={GalleryI}
+            alt=""
+          />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {gallery.map((item) => {
+          {gallery.map((item,index) => {
             return (
-              <div className="relative w-fit h-full overflow-hidden rounded-md md:ring-4 md:ring-[#e2fdff]/30 md:dark:ring-[#e2fdff]/50">
+              <div className={`relative w-fit h-full overflow-hidden rounded-md`}>
                 <img
                   className="w-[20rem] hover:cursor-pointer h-[20rem] peer object-center object-cover"
                   src={item}
                   alt=""
                 />
-                <div className="lg:absolute lg:top-0 lg:peer-hover:w-0 lg:cursor-pointer lg:hover:w-[0px] transition-all lg:w-full lg:h-full lg:bg-black/50 overflow-hidden grid place-items-center lg:text-white text-transparent">Hover Me</div>
+                <div className="lg:absolute lg:top-0 lg:peer-hover:w-0 lg:cursor-pointer lg:hover:w-[0px] transition-all lg:w-full lg:h-full lg:bg-black/50 overflow-hidden grid place-items-center lg:text-white text-transparent"></div>
               </div>
             );
           })}
