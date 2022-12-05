@@ -46,7 +46,7 @@ const Header = ({ setTheme, theme }) => {
         {/* This layout is best for all time */}{" "}
         <ol
           className={`top-[6.2rem] fixed right-0 left-0 lg:w-[50%] z-50 lg:static flex flex-col lg:flex-row justify-around bg-black/50 lg:bg-transparent w-full overflow-hidden transition-all duration-500 ${
-            !menu ? "h-[0] opacity-0" : "h-[34.3rem]"
+            !menu ? "h-[0] opacity-0" : "h-[88vh]"
           } lg:h-auto lg:opacity-100 `}
         >
           <Link to="/">
@@ -101,10 +101,12 @@ const Header = ({ setTheme, theme }) => {
               } p-2 right-0 top-[2.8rem] lg:top-[2rem] transition-all duration-500 flex flex-col gap-2 rounded-md text-2xl bg-[#e2fdff] dark:bg-[#e2fdff] dark:text-[#002733] text-[#5465ff]`}
             >
               {" "}
+              <a href="https://www.instagram.com/photography_dc_studio/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon
                 className="hover:scale-110 transition-all"
                 icon={faInstagram}
-              />{" "}
+              />
+                </a>{" "}
               <FontAwesomeIcon
                 className="hover:scale-110 transition-all"
                 icon={faTwitter}

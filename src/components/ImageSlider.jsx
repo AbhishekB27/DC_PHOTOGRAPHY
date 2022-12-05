@@ -28,7 +28,7 @@ const ImageSlider = () => {
             <SwiperSlide className="flex justify-center items-center">
               {" "}
               <img
-                className="lg:w-[40rem] h-[17.5rem] lg:h-[25rem] object-cover object-center rounded-md"
+                className="lg:w-[40rem] w-full h-[17.5rem] lg:h-[25rem] object-cover object-center rounded-md"
                 src={item}
                 alt="img"
               />
